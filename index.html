@@ -1,4 +1,4 @@
-<!doctype html!>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
@@ -6,262 +6,790 @@
 <meta name="theme-color" content="#e51c2b">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>مدیریت آرایشگاه کرمانی — حرفه‌ای</title>
+<title>مدیریت آرایشگاه کرمانی — حرفه ای</title>
 <style>
-:root{--red:#e51c2b;--red2:#b70f1d;--dark:#191b1f;--bg:#f4f5f7;--card:#fff;--muted:#7a7d84;--line:#e7e8eb;--green:#159447;--orange:#d97706;--shadow:0 8px 28px rgba(25,27,31,.08)}
-*{box-sizing:border-box}html{background:#111}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;background:#111;color:#17181b}
-button,input,select,textarea{font:inherit}.app{max-width:560px;min-height:100vh;margin:auto;background:var(--bg);padding-bottom:92px}
-header{color:#fff;background:linear-gradient(135deg,#17191d 0%,#3b2024 45%,var(--red) 100%);padding:28px 18px 24px;border-radius:0 0 28px 28px;box-shadow:0 8px 24px rgba(0,0,0,.16);position:sticky;top:0;z-index:20}
-.brand{font-size:23px;font-weight:900;letter-spacing:-.5px}.sub{font-size:12px;opacity:.78;margin-top:6px}
-main{padding:16px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.card{background:var(--card);border:1px solid rgba(0,0,0,.03);border-radius:19px;padding:16px;box-shadow:var(--shadow)}.label{font-size:12px;color:var(--muted)}.num{font-size:22px;font-weight:900;margin-top:6px;letter-spacing:-.4px}.green{color:var(--green)}.red{color:var(--red)}.orange{color:var(--orange)}
-.section{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:22px 2px 10px}.section h2{font-size:18px;margin:0;font-weight:900}.section .actions{display:flex;gap:7px}
-.btn{border:0;border-radius:13px;padding:10px 14px;background:var(--red);color:#fff;font-weight:800;cursor:pointer}.btn.gray{background:#303238}.btn.light{background:#f1f2f4;color:#26282c}.btn.danger{background:#fff0f1;color:#c51625}.btn.small{padding:7px 10px;font-size:12px}
-.list{display:flex;flex-direction:column;gap:9px}.row{background:#fff;border-radius:16px;padding:13px;display:flex;justify-content:space-between;align-items:center;gap:10px;box-shadow:0 4px 18px rgba(25,27,31,.05)}.row-main{min-width:0}.row-main b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.small{font-size:12px;color:var(--muted);margin-top:4px}.tag{font-size:11px;padding:6px 9px;border-radius:20px;background:#fee7e9;color:#b41422;white-space:nowrap}.tag.green{background:#e6f7ed;color:#117b3c}.tag.orange{background:#fff3dd;color:#a35b00}
-.search{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;outline:none;margin-bottom:10px}.search:focus,input:focus,select:focus,textarea:focus{border-color:#e99aa2;box-shadow:0 0 0 3px rgba(229,28,43,.08)}
-.empty{padding:28px;text-align:center;color:#92959a}.muted{color:var(--muted);font-size:12px}
-.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.quick button{border:0;background:#fff;border-radius:15px;padding:13px 8px;box-shadow:var(--shadow);font-weight:800;color:#25272b}.quick span{display:block;font-size:20px;margin-bottom:4px}
-.progress{height:8px;background:#eee;border-radius:10px;overflow:hidden;margin-top:10px}.progress>i{display:block;height:100%;background:var(--red);border-radius:10px}
-.chart{height:150px;display:flex;align-items:flex-end;gap:7px;padding:16px 5px 4px}.barwrap{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}.bar{width:100%;max-width:28px;background:linear-gradient(#f04450,var(--red));border-radius:8px 8px 3px 3px;min-height:4px}.barlabel{font-size:9px;color:#85878b}
-nav{position:fixed;bottom:0;left:0;right:0;max-width:560px;margin:auto;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid #ddd;display:grid;grid-template-columns:repeat(5,1fr);padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:50}nav button{border:0;background:none;color:#7b7d82;font-size:10px;font-weight:700;padding:3px 0}.navicon{display:block;font-size:20px;line-height:24px;margin-bottom:2px}.active{color:var(--red)!important;font-weight:900}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:flex-end;z-index:100}.sheet{background:#fff;width:100%;max-width:560px;margin:auto;border-radius:25px 25px 0 0;padding:20px;max-height:88vh;overflow:auto}.sheet h3{margin:0 0 12px;font-size:20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.full{grid-column:1/-1}input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fafafa;outline:none;margin:4px 0}textarea{min-height:85px;resize:vertical}.sheet-actions{display:flex;gap:8px;margin-top:12px}.sheet-actions>*{flex:1}
-.actionbar{display:flex;gap:6px;align-items:center}.iconbtn{border:0;background:#f0f1f3;border-radius:10px;width:35px;height:35px;font-size:15px}.iconbtn.d{background:#fff0f1;color:#c51625}
-.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.mini{background:#f7f7f8;border-radius:12px;padding:10px}.mini b{display:block;font-size:15px;margin-top:3px}
-@media(max-width:380px){.brand{font-size:20px}.grid{gap:8px}.card{padding:13px}.num{font-size:19px}.quick{grid-template-columns:1fr 1fr}}
+:root{--red:#e51c2b;--red2:#b70f1d;--dark:#191b1f;--dark2:#111;--card:#23262c;--muted:#9299a3;--line:#343840;--green:#18b66a;--yellow:#f2b90b}
+*{box-sizing:border-box}
+html{background:#111;box-sizing:border-box;width:100%;height:100%;overflow-x:hidden}
+body{margin:0;background:#111;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100dvh;width:100%;overflow-x:hidden}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.app{width:100%;min-height:100dvh;background:#111;overflow-x:hidden}
+header{color:#fff;background:linear-gradient(135deg,#e51c2b,#b70f1d);padding:18px 16px 14px;position:sticky;top:0;z-index:20}
+.brand{font-size:23px;font-weight:900;letter-spacing:-.4px}
+.sub{font-size:12px;opacity:.88;margin-top:5px}
+main{padding:16px;padding-bottom:100px;width:100%;max-width:none}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.section{display:flex;justify-content:space-between;align-items:center;margin:18px 0 10px}
+.section h2{font-size:17px;margin:0}
+.btn{border:0;border-radius:13px;padding:10px 14px;background:var(--red);color:#fff;font-weight:800}
+.btn.secondary{background:#343840}
+.btn.green{background:var(--green)}
+.btn.yellow{background:var(--yellow);color:#111}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.list{display:flex;flex-direction:column;gap:9px}
+.search{width:100%;padding:13px 14px;border:1px solid var(--line);background:#202329;color:#fff;border-radius:13px;outline:none}
+.empty{padding:28px;text-align:center;color:#9299a3;background:#202329;border-radius:14px}
+.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.quick .card{min-height:95px}
+.stat{font-size:24px;font-weight:900;margin-top:7px}
+.muted{color:var(--muted);font-size:12px}
+.badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;background:#343840;font-size:11px}
+.badge.green{background:#123f2c;color:#5ee0a1}
+.badge.red{background:#4b171d;color:#ff7b85}
+.badge.yellow{background:#493b0b;color:#ffd95a}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.col{display:flex;flex-direction:column;gap:6px}
+.actions{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.progress{height:8px;background:#eee;border-radius:999px;overflow:hidden}
+.progress>span{display:block;height:100%;background:var(--red);border-radius:999px}
+.chart{height:150px;display:flex;align-items:flex-end;gap:8px;padding:10px 4px}
+.bar{flex:1;background:var(--red);border-radius:8px 8px 2px 2px;min-height:3px}
+nav{position:fixed;bottom:0;left:0;right:0;width:100%;max-width:none;height:74px;background:#191b1f;border-top:1px solid #343840;display:grid;grid-template-columns:repeat(5,1fr);z-index:50}
+nav button{border:0;background:transparent;color:#9299a3;font-size:11px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+nav button.active{color:#fff}
+.navicon{font-size:22px;line-height:1}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:flex-end;justify-content:center;z-index:100}
+.modal.show{display:flex}
+.sheet{width:100%;max-width:none;max-height:92dvh;overflow:auto;background:#202329;border-radius:20px 20px 0 0;padding:16px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form .full{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;color:#c7ccd3;font-size:12px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #3a3e46;background:#17191d;color:#fff;border-radius:11px;outline:none}
+textarea{min-height:90px;resize:vertical}
+.actionbar{display:flex;gap:6px;align-items:center;justify-content:flex-end;margin-top:12px}
+.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kpi{background:#17191d;border:1px solid #343840;border-radius:12px;padding:10px}
+.kpi strong{font-size:18px;display:block}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:9px 6px;border-bottom:1px solid #343840;text-align:right}
+.toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%);background:#fff;color:#111;padding:10px 15px;border-radius:12px;font-weight:800;z-index:200;display:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.toast.show{display:block}
+@media(max-width:520px){
+  main{padding:12px;padding-bottom:96px}
+  .form{grid-template-columns:1fr}
+  .form .full{grid-column:auto}
+  .detail-grid{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
 <div class="app">
 <header>
   <div class="brand">مدیریت آرایشگاه کرمانی</div>
-  <div class="sub">نسخه حرفه‌ای • مشتری • نوبت • مالی • انبار • قرعه‌کشی • گزارش</div>
+  <div class="sub">مشتری • نوبت • مالی • انبار • قرعه‌کشی • گزارش</div>
 </header>
-<main id="view"></main>
-<nav>
-  <button data-page="home" class="active"><span class="navicon">⌂</span>خانه</button>
-  <button data-page="customers"><span class="navicon">♙</span>مشتریان</button>
-  <button data-page="appointments"><span class="navicon">▣</span>نوبت‌ها</button>
-  <button data-page="lottery"><span class="navicon">🎟</span>قرعه‌کشی</button>
-  <button data-page="more"><span class="navicon">☰</span>بیشتر</button>
+<main id="main"></main>
+<nav id="nav">
+  <button data-page="home" onclick="render('home')"><span class="navicon">⌂</span>خانه</button>
+  <button data-page="customers" onclick="render('customers')"><span class="navicon">♙</span>مشتریان</button>
+  <button data-page="appointments" onclick="render('appointments')"><span class="navicon">▣</span>نوبت‌ها</button>
+  <button data-page="finance" onclick="render('finance')"><span class="navicon">▤</span>مالی</button>
+  <button data-page="more" onclick="render('more')"><span class="navicon">☰</span>بیشتر</button>
 </nav>
-<div id="modal" class="modal"><div class="sheet" id="sheet"></div></div>
 </div>
 
+<div class="modal" id="modal">
+  <div class="sheet" id="sheet"></div>
+</div>
+<div class="toast" id="toast"></div>
+
 <script>
-const KEY='mk_barber_v2';
-const OLD='mk_barber_v1';
-let db=loadDB();
+const $=id=>document.getElementById(id);
+const todayISO=()=>new Date().toISOString().slice(0,10);
+const nowTime=()=>new Date().toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'});
+const fmtMoney=n=>Number(n||0).toLocaleString('fa-IR')+' تومان';
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const uid=()=>Date.now()+Math.floor(Math.random()*999);
+
+let db={
+ customers:[],
+ staff:[],
+ appointments:[],
+ transactions:[],
+ products:[],
+ winners:[],
+ settings:{}
+};
 
 function loadDB(){
-  try{
-    const current=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(current) return normalize(current);
-    const old=JSON.parse(localStorage.getItem(OLD)||'null');
-    if(old) return normalize(old);
-  }catch(e){}
-  return {customers:[],appointments:[],transactions:[],products:[],winners:[],staff:[]};
+ try{
+  const raw=localStorage.getItem('kermaniSalonDB');
+  if(raw) db={...db,...JSON.parse(raw)};
+ }catch(e){}
+ db.customers=Array.isArray(db.customers)?db.customers:[];
+ db.staff=Array.isArray(db.staff)?db.staff:[];
+ db.appointments=Array.isArray(db.appointments)?db.appointments:[];
+ db.transactions=Array.isArray(db.transactions)?db.transactions:[];
+ db.products=Array.isArray(db.products)?db.products:[];
+ db.winners=Array.isArray(db.winners)?db.winners:[];
+ db.settings=db.settings||{};
+ db.customers=db.customers.map(x=>({...x,id:x.id??uid(),name:x.name||'',phone:x.phone||'',birthday:x.birthday||'',visits:Number(x.visits)||0,notes:x.notes||'',createdAt:x.createdAt||todayISO()}));
+ db.staff=db.staff.map(x=>({...x,id:x.id??uid(),name:x.name||'',phone:x.phone||'',share:Number(x.share)||0,active:x.active!==false}));
+ db.appointments=db.appointments.map(x=>({...x,id:x.id??uid(),customerId:x.customerId||'',name:x.name||'',date:x.date||todayISO(),time:x.time||'',service:x.service||'',price:Number(x.price)||0,status:x.status||'ثبت شد',staffId:x.staffId||'',paid:!!x.paid,transactionId:x.transactionId||''}));
+ db.transactions=db.transactions.map(x=>({...x,id:x.id??uid(),type:x.type||'income',amount:Number(x.amount)||0,desc:x.desc||'',date:x.date||todayISO(),time:x.time||'',customerId:x.customerId||'',customerName:x.customerName||'',service:x.service||'',staffId:x.staffId||'',appointmentId:x.appointmentId||''}));
+ db.products=db.products.map(x=>({...x,id:x.id??uid(),name:x.name||'',stock:Number(x.stock)||0,min:Number(x.min)||0,price:Number(x.price)||0}));
+ db.winners=db.winners.map(x=>({...x,id:x.id??uid()}));
 }
-function normalize(x){
-  x=x||{};
-  return {
-    customers:Array.isArray(x.customers)?x.customers.map(c=>({...c,id:c.id||Date.now()+Math.random(),name:c.name||'',phone:c.phone||'',birthday:c.birthday||'',birthdaySms:c.birthdaySms!==false,note:c.note||'',chances:Number(c.chances)||1,visits:Number(c.visits)||0,created:c.created||Date.now()})):[],
-    appointments:Array.isArray(x.appointments)?x.appointments.map(a=>({...a,id:a.id||Date.now()+Math.random(),name:a.name||'',customerId:a.customerId||'',date:a.date||todayISO(),time:a.time||'',service:a.service||'',price:Number(a.price)||0,status:a.status||'رزرو'})):[],
-    transactions:Array.isArray(x.transactions)?x.transactions.map(t=>({...t,id:t.id||Date.now()+Math.random(),type:t.type||'income',amount:Number(t.amount)||0,desc:t.desc||'',date:t.date||todayISO()})):[],
-    products:Array.isArray(x.products)?x.products.map(p=>({...p,id:p.id||Date.now()+Math.random(),name:p.name||'',qty:Number(p.qty)||0,buy:Number(p.buy)||0,sell:Number(p.sell)||0,min:Number(p.min)||1})):[],
-    winners:Array.isArray(x.winners)?x.winners:[],staff:Array.isArray(x.staff)?x.staff.map(s=>({...s,id:s.id||Date.now()+Math.random(),name:s.name||'',phone:s.phone||'',active:s.active!==false})):[]};
-}
-function save(){localStorage.setItem(KEY,JSON.stringify(db))}
-save();
-const $=id=>document.getElementById(id);
-const money=n=>(Number(n)||0).toLocaleString('fa-IR')+' تومان';
-const todayISO=()=>{const d=new Date();return d.toISOString().slice(0,10)};
-const todayFa=()=>new Date().toLocaleDateString('fa-IR');
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const isToday=d=>d===todayISO();
-const sum=(arr,fn)=>arr.reduce((a,x)=>a+(Number(fn(x))||0),0);
-function closeSheet(){$('modal').style.display='none'}
-function openSheet(title,body,onSave){
-  $('sheet').innerHTML=`<h3>${title}</h3>${body}<div class="sheet-actions"><button class="btn" id="saveBtn">ذخیره</button><button class="btn gray" onclick="closeSheet()">بستن</button></div>`;
-  $('modal').style.display='flex';
-  $('saveBtn').onclick=()=>{if(onSave()!==false) closeSheet()};
-}
-$('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeSheet()});
 
-function dashboard(){
-  const inc=sum(db.transactions,t=>t.type==='income'?t.amount:0), exp=sum(db.transactions,t=>t.type==='expense'?t.amount:0);
-  const todayInc=sum(db.transactions,t=>t.type==='income'&&t.date===todayISO()?t.amount:0);
-  const todayExp=sum(db.transactions,t=>t.type==='expense'&&t.date===todayISO()?t.amount:0);
-  const todayApps=db.appointments.filter(a=>a.date===todayISO()).sort((a,b)=>(a.time||'').localeCompare(b.time||''));
-  const low=db.products.filter(p=>p.qty<=p.min);
-  const todayMD=todayISO().slice(5);
-  const birthdays=db.customers.filter(c=>c.birthday&&c.birthday.slice(5)===todayMD);
-  const last=db.transactions.slice().reverse().slice(0,5);
-  return `
-  <div class="grid">
-    <div class="card"><div class="label">درآمد کل</div><div class="num green">${money(inc)}</div></div>
-    <div class="card"><div class="label">هزینه کل</div><div class="num red">${money(exp)}</div></div>
-    <div class="card"><div class="label">سود خالص</div><div class="num">${money(inc-exp)}</div></div>
-    <div class="card"><div class="label">مشتریان</div><div class="num">${db.customers.length.toLocaleString('fa-IR')}</div></div>
-  </div>
-  <div class="card" style="margin-top:11px">
-    <div style="display:flex;justify-content:space-between;gap:10px"><b>امروز</b><span class="muted">${todayFa()}</span></div>
-    <div class="detail-grid">
-      <div class="mini"><span class="label">درآمد امروز</span><b class="green">${money(todayInc)}</b></div>
-      <div class="mini"><span class="label">هزینه امروز</span><b class="red">${money(todayExp)}</b></div>
-      <div class="mini"><span class="label">نوبت امروز</span><b>${todayApps.length.toLocaleString('fa-IR')}</b></div>
-      <div class="mini"><span class="label">موجودی کم</span><b class="${low.length?'red':'green'}">${low.length.toLocaleString('fa-IR')}</b></div>
-    </div>
-  </div>
-  <div class="quick">
-    <button onclick="addCustomer()"><span>👤</span>مشتری جدید</button>
-    <button onclick="addAppointment()"><span>📅</span>نوبت جدید</button>
-    <button onclick="addTx()"><span>💰</span>ثبت دخل/خرج</button>
-  </div>
-  <div class="section"><h2>نوبت‌های امروز</h2><button class="btn small" onclick="addAppointment()">+ نوبت</button></div>
-  <div class="list">${todayApps.map(appRow).join('')||'<div class="card empty">برای امروز نوبتی ثبت نشده.</div>'}</div>
-  <div class="section"><h2>🎂 تولد مشتری‌ها</h2><span class="tag green">۵۰٪ تخفیف</span></div>
-  <div class="list">${birthdays.map(c=>`<div class="row"><div class="row-main"><b>${esc(c.name)} 🎉</b><div class="small">امروز تولدشه • ${esc(c.phone||'شماره ثبت نشده')}</div><div class="small">پیام: «سلام ${esc(c.name)} عزیز 🌹 تولدتون مبارک! امروز یک سرویس با ۵۰٪ تخفیف در آرایشگاه کرمانی مهمان ما هستید. 💈❤️»</div></div><span class="tag green">۵۰٪ تخفیف</span></div>`).join('')||'<div class="card empty">امروز تولدی ثبت نشده.</div>'}</div>
-  <div class="section"><h2>هشدار موجودی</h2><button class="btn light small" onclick="render('inventory')">انبار</button></div>
-  <div class="list">${low.map(p=>`<div class="row"><div class="row-main"><b>${esc(p.name)}</b><div class="small">موجودی ${p.qty.toLocaleString('fa-IR')} عدد • حد هشدار ${p.min.toLocaleString('fa-IR')}</div></div><span class="tag">⚠️ رو به اتمام</span></div>`).join('')||'<div class="card empty">✅ موجودی محصولات مناسب است.</div>'}</div>
-  <div class="section"><h2>آخرین تراکنش‌ها</h2><button class="btn light small" onclick="render('finance')">همه</button></div>
-  <div class="list">${last.map(t=>`<div class="row"><div class="row-main"><b>${esc(t.desc||'بدون شرح')}</b><div class="small">${esc(t.date)}</div></div><span class="tag ${t.type==='income'?'green':' '}">${t.type==='income'?'+':'−'} ${money(t.amount)}</span></div>`).join('')||'<div class="card empty">هنوز تراکنشی ثبت نشده.</div>'}</div>`;
+function save(){
+ localStorage.setItem('kermaniSalonDB',JSON.stringify(db));
 }
-function appRow(a){
+
+function toast(msg){
+ const t=$('toast');
+ t.textContent=msg;
+ t.classList.add('show');
+ setTimeout(()=>t.classList.remove('show'),1800);
+}
+
+function openModal(html){
+ $('sheet').innerHTML=html;
+ $('modal').classList.add('show');
+}
+
+function closeModal(){
+ $('modal').classList.remove('show');
+}
+
+$('modal').addEventListener('click',e=>{
+ if(e.target.id==='modal') closeModal();
+});
+
+function navActive(page){
+ document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+}function dashboard(){
+  const inc=sum(db.transactions,t=>t.type==='income'?t.amount:0);
+  const exp=sum(db.transactions,t=>t.type==='expense'?t.amount:0);
+  const today=todayISO();
+
+  const todayInc=sum(db.transactions,t=>
+    t.type==='income'&&t.date===today?t.amount:0
+  );
+
+  const todayExp=sum(db.transactions,t=>
+    t.type==='expense'&&t.date===today?t.amount:0
+  );
+
+  const todayApps=db.appointments
+    .filter(a=>a.date===today)
+    .sort((a,b)=>(a.time||'').localeCompare(b.time||''));
+
+  const low=db.products.filter(p=>
+    Number(p.qty)<=Number(p.min)
+  );
+
+  const todayMD=today.slice(5);
+
+  const birthdays=db.customers.filter(c=>
+    c.birthday&&String(c.birthday).slice(5)===todayMD
+  );
+
+  const last=db.transactions
+    .slice()
+    .reverse()
+    .slice(0,5);
+
+  return `
+    <div class="grid">
+
+      <div class="card">
+        <div class="label">📅 نوبت‌های امروز</div>
+        <div class="num">${todayApps.length.toLocaleString('fa-IR')}</div>
+      </div>
+
+      <div class="card">
+        <div class="label">🎂 تولد امروز</div>
+        <div class="num">${birthdays.length.toLocaleString('fa-IR')}</div>
+      </div>
+
+      <div class="card">
+        <div class="label">⚠️ هشدار موجودی</div>
+        <div class="num ${low.length?'red':'green'}">
+          ${low.length.toLocaleString('fa-IR')}
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">💳 آخرین تراکنش</div>
+        <div class="num">
+          ${last.length?money(last[0].amount):'—'}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2>وضعیت‌های مهم امروز</h2>
+    </div>
+
+    <div class="list">
+
+      <div class="row" onclick="render('appointments')">
+        <div class="row-main">
+          <b>📅 نوبت‌های امروز</b>
+          <div class="small">
+            ${
+              todayApps.length
+              ?todayApps.map(a=>
+                esc(a.time||'بدون ساعت')+' • '+esc(a.name)
+              ).join('، ')
+              :'نوبتی ثبت نشده'
+            }
+          </div>
+        </div>
+        <span class="tag orange">
+          ${todayApps.length.toLocaleString('fa-IR')}
+        </span>
+      </div>
+
+      <div class="row">
+        <div class="row-main">
+          <b>🎂 تولد مشتری‌ها</b>
+          <div class="small">
+            ${
+              birthdays.length
+              ?birthdays.map(c=>esc(c.name)).join('، ')
+              :'تولد امروز ثبت نشده'
+            }
+          </div>
+        </div>
+        <span class="tag green">
+          ${birthdays.length.toLocaleString('fa-IR')}
+        </span>
+      </div>
+
+      <div class="row" onclick="render('inventory')">
+        <div class="row-main">
+          <b>⚠️ هشدار موجودی</b>
+          <div class="small">
+            ${
+              low.length
+              ?low.map(p=>
+                esc(p.name)+' ('+
+                Number(p.qty).toLocaleString('fa-IR')+
+                ')'
+              ).join('، ')
+              :'موجودی همه محصولات مناسب است'
+            }
+          </div>
+        </div>
+        <span class="tag">
+          ${low.length.toLocaleString('fa-IR')}
+        </span>
+      </div>
+
+      <div class="row" onclick="render('finance')">
+        <div class="row-main">
+          <b>💳 آخرین تراکنش‌ها</b>
+          <div class="small">
+            ${
+              last.length
+              ?last.slice(0,3).map(t=>
+                esc(t.customerName||t.desc||'بدون شرح')+
+                ' • '+money(t.amount)
+              ).join(' | ')
+              :'تراکنشی ثبت نشده'
+            }
+          </div>
+        </div>
+        <span>›</span>
+      </div>
+
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="label">درآمد کل</div>
+        <div class="num green">${money(inc)}</div>
+      </div>
+
+      <div class="card">
+        <div class="label">هزینه کل</div>
+        <div class="num red">${money(exp)}</div>
+      </div>
+
+      <div class="card">
+        <div class="label">سود خالص</div>
+        <div class="num">${money(inc-exp)}</div>
+      </div>
+
+      <div class="card">
+        <div class="label">مشتریان</div>
+        <div class="num">
+          ${db.customers.length.toLocaleString('fa-IR')}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top:11px">
+
+      <div class="section">
+        <b>امروز</b>
+        <span class="muted">${todayFa()}</span>
+      </div>
+
+      <div class="detail-grid">
+
+        <div class="mini">
+          <span class="label">درآمد امروز</span>
+          <b class="green">${money(todayInc)}</b>
+        </div>
+
+        <div class="mini">
+          <span class="label">هزینه امروز</span>
+          <b class="red">${money(todayExp)}</b>
+        </div>
+
+        <div class="mini">
+          <span class="label">نوبت امروز</span>
+          <b>${todayApps.length.toLocaleString('fa-IR')}</b>
+        </div>
+
+        <div class="mini">
+          <span class="label">موجودی کم</span>
+          <b class="${low.length?'red':'green'}">
+            ${low.length.toLocaleString('fa-IR')}
+          </b>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="quick">
+
+      <button onclick="addCustomer()">
+        <span>👤</span>مشتری جدید
+      </button>
+
+      <button onclick="addAppointment()">
+        <span>📅</span>نوبت جدید
+      </button>
+
+      <button onclick="addTx()">
+        <span>💰</span>ثبت دخل/خرج
+      </button>
+
+    </div>
+
+    <div class="section">
+      <h2>نوبت‌های امروز</h2>
+      <button class="btn small" onclick="addAppointment()">+ نوبت</button>
+    </div>
+
+    <div class="list">
+      ${
+        todayApps.map(appRow).join('')||
+        '<div class="card empty">برای امروز نوبتی ثبت نشده.</div>'
+      }
+    </div>
+
+    <div class="section">
+      <h2>🎂 تولد مشتری‌ها</h2>
+      <span class="tag green">۵۰٪ تخفیف</span>
+    </div>
+
+    <div class="list">
+      ${
+        birthdays.map(c=>`
+          <div class="row">
+            <div class="row-main">
+              <b>${esc(c.name)} 🎉</b>
+              <div class="small">
+                امروز تولدشه • ${esc(c.phone||'شماره ثبت نشده')}
+              </div>
+            </div>
+            <span class="tag green">۵۰٪ تخفیف</span>
+          </div>
+        `).join('')||
+        '<div class="card empty">امروز تولدی ثبت نشده.</div>'
+      }
+    </div>
+
+    <div class="section">
+      <h2>هشدار موجودی</h2>
+      <button class="btn light small"
+              onclick="render('inventory')">
+        انبار
+      </button>
+    </div>
+
+    <div class="list">
+      ${
+        low.map(p=>`
+          <div class="row">
+            <div class="row-main">
+              <b>${esc(p.name)}</b>
+              <div class="small">
+                موجودی ${Number(p.qty).toLocaleString('fa-IR')}
+                عدد • حد هشدار ${Number(p.min).toLocaleString('fa-IR')}
+              </div>
+            </div>
+            <span class="tag">⚠️ رو به اتمام</span>
+          </div>
+        `).join('')||
+        '<div class="card empty">✅ موجودی محصولات مناسب است.</div>'
+      }
+    </div>
+
+    <div class="section">
+      <h2>آخرین تراکنش‌ها</h2>
+      <button class="btn light small"
+              onclick="render('finance')">
+        همه
+      </button>
+    </div>
+
+    <div class="list">
+      ${
+        last.map(t=>`
+          <div class="row">
+            <div class="row-main">
+              <b>${esc(t.customerName||t.desc||'بدون شرح')}</b>
+              <div class="small">
+                ${esc(t.service||t.desc||'')}
+                • ${esc(t.date)}
+                ${t.time?' • '+esc(t.time):''}
+              </div>
+            </div>
+
+            <span class="tag ${t.type==='income'?'green':''}">
+              ${t.type==='income'?'+':'−'} ${money(t.amount)}
+            </span>
+          </div>
+        `).join('')||
+        '<div class="card empty">هنوز تراکنشی ثبت نشده.</div>'
+      }
+    </div>
+  `;
+}function appRow(a){
   const cls=a.status==='انجام شد'?'green':a.status==='لغو شد'?'':'orange';
-  return `<div class="row"><div class="row-main"><b>${esc(a.time||'بدون ساعت')} • ${esc(a.name)}</b><div class="small">${esc(a.service||'خدمت ثبت نشده')} • ${money(a.price)}${a.staffId?' • '+esc((db.staff.find(s=>String(s.id)===String(a.staffId))||{}).name||''):''}</div></div><div class="actionbar"><span class="tag ${cls}">${esc(a.status)}</span><button class="iconbtn" onclick="editAppointment(${a.id})">✎</button><button class="iconbtn d" onclick="delAppointment(${a.id})">×</button></div></div>`;
+  return `<div class="row">
+    <div class="row-main">
+      <b>${esc(a.time||'بدون ساعت')} • ${esc(a.name)}</b>
+      <div class="small">
+        ${esc(a.service||'خدمت ثبت نشده')} • ${money(a.price)}
+        ${a.staffId?' • '+esc((db.staff.find(s=>String(s.id)===String(a.staffId))||{}).name||''):''}
+      </div>
+    </div>
+    <div class="actionbar">
+      <span class="tag ${cls}">${esc(a.status)}</span>
+      <button class="iconbtn" onclick="editAppointment(${a.id})">✎</button>
+      <button class="iconbtn d" onclick="delAppointment(${a.id})">×</button>
+    </div>
+  </div>`;
 }
 
 function customerRows(arr){
-  return arr.map(c=>`<div class="row"><div class="row-main" onclick="customerDetails(${c.id})" style="flex:1;cursor:pointer"><b>${esc(c.name)}${c.birthday?' 🎂':''}</b><div class="small">${esc(c.phone||'بدون شماره')} • ${c.visits.toLocaleString('fa-IR')} مراجعه • ${c.chances.toLocaleString('fa-IR')} شانس</div></div><div class="actionbar"><button class="iconbtn" onclick="customerDetails(${c.id})">›</button><button class="iconbtn" onclick="editCustomer(${c.id})">✎</button><button class="iconbtn d" onclick="delCustomer(${c.id})">×</button></div></div>`).join('')||'<div class="card empty">مشتری‌ای ثبت نشده.</div>';
+  return arr.map(c=>`
+    <div class="row">
+      <div class="row-main"
+           onclick="customerDetails(${c.id})"
+           style="flex:1;cursor:pointer">
+        <b>${esc(c.name)}${c.birthday?' 🎂':''}</b>
+        <div class="small">
+          ${esc(c.phone||'بدون شماره')}
+          • ${c.visits.toLocaleString('fa-IR')} مراجعه
+          • ${c.chances.toLocaleString('fa-IR')} شانس
+        </div>
+      </div>
+
+      <div class="actionbar">
+        <button class="iconbtn"
+                onclick="customerDetails(${c.id})">›</button>
+        <button class="iconbtn"
+                onclick="editCustomer(${c.id})">✎</button>
+        <button class="iconbtn d"
+                onclick="delCustomer(${c.id})">×</button>
+      </div>
+    </div>
+  `).join('') ||
+  '<div class="card empty">مشتری‌ای ثبت نشده.</div>';
 }
+
 function customers(){
-  return `<div class="section"><h2>مشتریان (${db.customers.length.toLocaleString('fa-IR')})</h2><button class="btn" onclick="addCustomer()">+ مشتری</button></div>
-  <input class="search" id="cs" placeholder="جستجوی نام، شماره یا یادداشت..." oninput="filterCustomers()">
-  <div class="list" id="cl">${customerRows(db.customers)}</div>`;
+  return `
+    <div class="section">
+      <h2>مشتریان (${db.customers.length.toLocaleString('fa-IR')})</h2>
+      <button class="btn" onclick="addCustomer()">+ مشتری</button>
+    </div>
+
+    <input class="search"
+           id="cs"
+           placeholder="جستجوی نام، شماره یا یادداشت..."
+           oninput="filterCustomers()">
+
+    <div class="list" id="cl">
+      ${customerRows(db.customers)}
+    </div>
+  `;
 }
+
 function filterCustomers(){
   const q=($('cs').value||'').trim().toLowerCase();
-  $('cl').innerHTML=customerRows(db.customers.filter(c=>(c.name+' '+c.phone+' '+c.note).toLowerCase().includes(q)));
+
+  $('cl').innerHTML=customerRows(
+    db.customers.filter(c=>
+      (c.name+' '+c.phone+' '+c.note)
+      .toLowerCase()
+      .includes(q)
+    )
+  );
 }
+
 function addCustomer(c=null){
   const edit=!!c;
-  openSheet(edit?'ویرایش مشتری':'مشتری جدید',`
+
+  openSheet(
+    edit?'ویرایش مشتری':'مشتری جدید',
+
+    `
     <div class="form-grid">
-      <input class="full" id="cn" placeholder="نام و نام خانوادگی" value="${esc(c?.name||'')}">
-      <input id="cp" inputmode="tel" placeholder="شماره تماس" value="${esc(c?.phone||'')}">
-      <label class="full small">🎂 تاریخ تولد مشتری<input class="full" id="cbday" type="date" value="${esc(c?.birthday||'')}"></label>
-      <label class="full" style="display:flex;align-items:center;gap:8px;padding:10px 0"><input id="cbsms" type="checkbox" ${c?.birthdaySms!==false?'checked':''}> ارسال پیامک تبریک تولد و تخفیف ۵۰٪</label>
-      <input id="cc" type="number" min="1" placeholder="شانس قرعه‌کشی" value="${c?.chances||1}">
-      <textarea class="full" id="cnote" placeholder="یادداشت مشتری">${esc(c?.note||'')}</textarea>
-    </div>`,()=>{
-      const name=$('cn').value.trim(); if(!name){alert('نام مشتری را وارد کنید.');return false}
-      if(edit){Object.assign(c,{name,phone:$('cp').value.trim(),birthday:$('cbday').value,birthdaySms:$('cbsms').checked,chances:Math.max(1,Number($('cc').value)||1),note:$('cnote').value.trim()})}
-      else db.customers.unshift({id:Date.now(),name,phone:$('cp').value.trim(),birthday:$('cbday').value,birthdaySms:$('cbsms').checked,chances:Math.max(1,Number($('cc').value)||1),note:$('cnote').value.trim(),visits:0,created:Date.now()});
-      save();render('customers');
-    });
-}
-function editCustomer(id){const c=db.customers.find(x=>x.id==id);if(c)addCustomer(c)}
-function customerDetails(id){
-  const c=db.customers.find(x=>x.id==id); if(!c)return;
-  const apps=db.appointments.filter(a=>a.customerId==id||a.name===c.name).sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time)).slice(0,8);
-  openSheet('پرونده مشتری',`
-    <div class="card" style="box-shadow:none;background:#f7f7f8">
-      <b style="font-size:20px">${esc(c.name)}</b>
-      <div class="small">${esc(c.phone||'شماره ثبت نشده')}</div><div class="small">🎂 تولد: ${c.birthday?esc(c.birthday):'ثبت نشده'} ${c.birthday?'• پیامک تولد '+(c.birthdaySms!==false?'روشن':'خاموش'):''}</div>
-      <div class="detail-grid">
-        <div class="mini"><span class="label">مراجعه</span><b>${c.visits.toLocaleString('fa-IR')}</b></div>
-        <div class="mini"><span class="label">شانس قرعه‌کشی</span><b>${c.chances.toLocaleString('fa-IR')}</b></div>
-      </div>
-      <p class="small">${esc(c.note||'یادداشتی ثبت نشده')}</p>
+
+      <input class="full"
+             id="cn"
+             placeholder="نام و نام خانوادگی"
+             value="${esc(c?.name||'')}">
+
+      <input id="cp"
+             inputmode="tel"
+             placeholder="شماره تماس"
+             value="${esc(c?.phone||'')}">
+
+      <label class="full small">
+        🎂 تاریخ تولد مشتری (شمسی)
+
+        <input class="full"
+               id="cbday"
+               type="text"
+               inputmode="numeric"
+               placeholder="مثلاً ۱۳۷۵/۰۵/۲۲"
+               value="${esc(birthdayFa(c?.birthday||''))}">
+
+        <span class="small">
+          فرمت: سال/ماه/روز — مثال: ۱۳۷۵/۰۵/۲۲
+        </span>
+      </label>
+
+      <input id="cc"
+             type="number"
+             min="1"
+             placeholder="شانس قرعه‌کشی"
+             value="${c?.chances||1}">
+
+      <textarea class="full"
+                id="cnote"
+                placeholder="یادداشت مشتری">${esc(c?.note||'')}</textarea>
+
     </div>
-    <div class="section"><h2>نوبت‌های مشتری</h2><button class="btn small" onclick="closeSheet();addAppointment(${c.id})">+ نوبت</button></div>
-    <div class="list">${apps.map(a=>`<div class="row"><div class="row-main"><b>${esc(a.date)} • ${esc(a.time)}</b><div class="small">${esc(a.service)} • ${money(a.price)}</div></div><span class="tag">${esc(a.status)}</span></div>`).join('')||'<div class="empty">نوبتی ثبت نشده.</div>'}</div>`,
-    ()=>{closeSheet();editCustomer(id)});
-}
-function delCustomer(id){
-  const c=db.customers.find(x=>x.id==id);if(!c)return;
-  if(confirm(`مشتری «${c.name}» حذف شود؟ این کار قابل برگشت نیست.`)){db.customers=db.customers.filter(x=>x.id!=id);save();render('customers')}
+    `,
+
+    ()=>{
+      const name=$('cn').value.trim();
+
+      if(!name){
+        alert('نام مشتری را وارد کنید.');
+        return false;
+      }
+
+      const rawBirthday=$('cbday').value.trim();
+      const birthday=rawBirthday?birthdayISO(rawBirthday):'';
+
+      if(rawBirthday&&!birthday){
+        alert(
+          'تاریخ تولد را به شکل صحیح شمسی وارد کنید؛ مثال: ۱۳۷۵/۰۵/۲۲'
+        );
+        return false;
+      }
+
+      if(edit){
+
+        Object.assign(c,{
+          name,
+          phone:$('cp').value.trim(),
+          birthday,
+          chances:Math.max(
+            1,
+            Number($('cc').value)||1
+          ),
+          note:$('cnote').value.trim()
+        });
+
+      }else{
+
+        db.customers.unshift({
+          id:Date.now(),
+          name,
+          phone:$('cp').value.trim(),
+          birthday,
+          chances:Math.max(
+            1,
+            Number($('cc').value)||1
+          ),
+          note:$('cnote').value.trim(),
+          visits:0,
+          created:Date.now()
+        });
+
+      }
+
+      save();
+      render('customers');
+    }
+  );
 }
 
-function appointments(){
-  const arr=db.appointments.slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
-  return `<div class="section"><h2>نوبت‌ها</h2><button class="btn" onclick="addAppointment()">+ نوبت</button></div>
-  <div class="card" style="margin-bottom:10px"><div class="form-grid"><input class="full" id="adfilter" type="date" value="${todayISO()}" onchange="filterApps()"><select class="full" id="asfilter" onchange="filterApps()"><option value="">همه وضعیت‌ها</option><option>رزرو</option><option>انجام شد</option><option>لغو شد</option></select></div></div>
-  <div class="list" id="al">${arr.filter(a=>a.date===todayISO()).map(appRow).join('')||'<div class="card empty">برای این روز نوبتی ثبت نشده.</div>'}</div>`;
-}
-function filterApps(){
-  const d=$('adfilter').value, s=$('asfilter').value;
-  const arr=db.appointments.filter(a=>(!d||a.date===d)&&(!s||a.status===s)).sort((a,b)=>(a.time||'').localeCompare(b.time||''));
-  $('al').innerHTML=arr.map(appRow).join('')||'<div class="card empty">نوبتی پیدا نشد.</div>';
-}
-function addAppointment(customerId=''){
-  const c=customerId?db.customers.find(x=>x.id==customerId):null;
-  openSheet('نوبت جدید',`
-    <div class="form-grid">
-      <select class="full" id="ac">${`<option value="">انتخاب مشتری (اختیاری)</option>`+db.customers.map(x=>`<option value="${x.id}" ${c?.id===x.id?'selected':''}>${esc(x.name)}${x.phone?' — '+esc(x.phone):''}</option>`).join('')}</select>
-      <input class="full" id="an" placeholder="نام مشتری" value="${esc(c?.name||'')}">
-      <input id="date" type="date" value="${todayISO()}"><input id="time" type="time">
-      <input id="service" placeholder="خدمت (مثلاً اصلاح)">
-      <input id="price" type="number" inputmode="numeric" placeholder="مبلغ">
-      <select class="full" id="status"><option>رزرو</option><option>انجام شد</option><option>لغو شد</option></select>
-    </div>`,()=>{
-      const customer=$('ac').value; const name=$('an').value.trim()||(db.customers.find(x=>x.id==customer)?.name||'');
-      if(!name){alert('مشتری را انتخاب یا نام او را وارد کنید.');return false}
-      db.appointments.push({id:Date.now(),customerId:customer,name,date:$('date').value||todayISO(),time:$('time').value,service:$('service').value.trim(),price:Number($('price').value)||0,staffId:$('staff').value,status:$('status').value});
-      save();render('appointments');
-    });
-}
-function editAppointment(id){
-  const a=db.appointments.find(x=>x.id==id);if(!a)return;
-  openSheet('ویرایش نوبت',`
-    <div class="form-grid">
-      <select class="full" id="ac">${`<option value="">بدون اتصال به مشتری</option>`+db.customers.map(x=>`<option value="${x.id}" ${String(a.customerId)===String(x.id)?'selected':''}>${esc(x.name)}</option>`).join('')}</select>
-      <input class="full" id="an" placeholder="نام مشتری" value="${esc(a.name)}">
-      <input id="date" type="date" value="${esc(a.date)}"><input id="time" type="time" value="${esc(a.time)}">
-      <input id="service" placeholder="خدمت" value="${esc(a.service)}"><input id="price" type="number" value="${a.price}">
-       <select class="full" id="staff"><option value="">بدون آرایشگر</option>${db.staff.filter(s=>s.active!==false).map(s=>`<option value="${s.id}" ${String(a.staffId)===String(s.id)?'selected':''}>${esc(s.name)}</option>`).join('')}</select>
-      <select class="full" id="status"><option ${a.status==='رزرو'?'selected':''}>رزرو</option><option ${a.status==='انجام شد'?'selected':''}>انجام شد</option><option ${a.status==='لغو شد'?'selected':''}>لغو شد</option></select>
-    </div>`,()=>{
-      const oldStatus=a.status, customer=$('ac').value, name=$('an').value.trim()||(db.customers.find(x=>x.id==customer)?.name||'');
-      if(!name){alert('نام مشتری را وارد کنید.');return false}
-      Object.assign(a,{customerId:customer,name,date:$('date').value||todayISO(),time:$('time').value,service:$('service').value.trim(),price:Number($('price').value)||0,staffId:$('staff').value,status:$('status').value});
-      if(a.status==='انجام شد'&&oldStatus!=='انجام شد'&&customer){const c=db.customers.find(x=>String(x.id)===String(customer));if(c)c.visits=(Number(c.visits)||0)+1}
-      save();render('appointments');
-    });
-}
-function delAppointment(id){if(confirm('این نوبت حذف شود؟')){db.appointments=db.appointments.filter(x=>x.id!=id);save();render('appointments')}}
-
-function lottery(){
-  return `<div class="card" style="text-align:center;background:linear-gradient(135deg,#1b1d21,#3a2025);color:#fff">
-    <div style="font-size:44px">🎟️</div><h2 style="margin:5px 0">قرعه‌کشی مشتریان</h2>
-    <p style="color:#c7c9cd;font-size:12px">شانس هر مشتری در قرعه‌کشی قابل تنظیم است.</p>
-    <button class="btn" onclick="draw()">🎉 انتخاب برنده</button>
-  </div>
-  <div class="section"><h2>برندگان قبلی</h2></div>
-  <div class="list">${db.winners.map((w,i)=>`<div class="row"><div class="row-main"><b>${esc(w.name)}</b><div class="small">${esc(w.date)}</div></div><span class="tag">${esc(w.prize)}</span></div>`).join('')||'<div class="card empty">هنوز برنده‌ای ثبت نشده.</div>'}</div>`;
-}
-function draw(){
-  if(!db.customers.length){alert('اول حداقل یک مشتری ثبت کنید.');return}
-  const pool=db.customers.flatMap(c=>Array(Math.max(1,Number(c.chances)||1)).fill(c));
-  const w=pool[Math.floor(Math.random()*pool.length)];
-  const prize=prompt('نام جایزه را وارد کنید:','ادکلن');
-  if(prize===null)return;
-  db.winners.unshift({id:Date.now(),name:w.name,phone:w.phone||'',prize:prize.trim()||'ادکلن',date:todayFa(),smsPending:!!w.phone});
-  save();render('lottery');alert('🎉 برنده: '+w.name+'\n\nپیامک تبریک برای او در صف ارسال قرار گرفت.');
+function editCustomer(id){
+  const c=db.customers.find(x=>x.id==id);
+  if(c)addCustomer(c);
 }
 
-function staff(){
-  const rows=db.staff.map(s=>{const apps=db.appointments.filter(a=>String(a.staffId)===String(s.id)&&a.status==='انجام شد');const total=sum(apps,a=>a.price);const pay=total*0.5;return `<div class="row"><div class="row-main"><b>💈 ${esc(s.name)}</b><div class="small">${apps.length.toLocaleString('fa-IR')} خدمت • کارکرد: ${money(total)} • قابل پرداخت: ${money(pay)}</div></div><div class="actionbar"><button class="iconbtn" onclick="editStaff(${s.id})">✎</button><button class="iconbtn d" onclick="delStaff(${s.id})">×</button></div></div>`}).join('');
-  return `<div class="section"><h2>💈 کارکرد پرسنل</h2><button class="btn" onclick="addStaff()">+ پرسنل</button></div><div class="card"><div class="small">برای هر خدمت انجام‌شده، کارکرد پرسنل به‌صورت خودکار ۵۰٪ محاسبه می‌شود.</div></div><div class="list">${rows||'<div class="card empty">هنوز پرسنلی ثبت نشده.</div>'}</div>`;
-}
-function addStaff(s=null){const edit=!!s;openSheet(edit?'ویرایش پرسنل':'پرسنل جدید',`<div class="form-grid"><input class="full" id="sn" placeholder="نام پرسنل" value="${esc(s?.name||'')}"><input class="full" id="sp" placeholder="شماره موبایل" value="${esc(s?.phone||'')}"></div>`,()=>{const name=$('sn').value.trim();if(!name){alert('نام پرسنل را وارد کنید.');return false}if(edit)Object.assign(s,{name,phone:$('sp').value.trim()});else db.staff.push({id:Date.now(),name,phone:$('sp').value.trim(),active:true});save();render('staff')})}
-function editStaff(id){const s=db.staff.find(x=>x.id==id);if(s)addStaff(s)}
-function delStaff(id){const s=db.staff.find(x=>x.id==id);if(s&&confirm(`پرسنل «${s.name}» حذف شود؟`)){db.staff=db.staff.filter(x=>x.id!=id);db.appointments.forEach(a=>{if(String(a.staffId)===String(id))a.staffId=''});save();render('staff')}}
+function customerDetails(id){
 
-function finance(){
-  const inc=sum(db.transactions,t=>t.type==='income'?t.amount:0), exp=sum(db.transactions,t=>t.type==='expense'?t.amount:0);
-  return `<div class="grid"><div class="card"><div class="label">درآمد</div><div class="num green">${money(inc)}</div></div><div class="card"><div class="label">هزینه</div><div class="num red">${money(exp)}</div></div><div class="card"><div class="label">سود خالص</div><div class="num">${money(inc-exp)}</div></div><div class="card"><div class="label">تعداد تراکنش</div><div class="num">${db.transactions.length.toLocaleString('fa-IR')}</div></div></div>
-  <div class="section"><h2>دخل و خرج</h2><button class="btn" onclick="addTx()">+ ثبت</button></div>
-  <div class="list">${db.transactions.slice().reverse().map(t=>`<div class="row"><div class="row-main"><b>${esc(t.desc||'بدون شرح')}</b><div class="small">${esc(t.date)} • ${t.type==='income'?'درآمد':'هزینه'}</div></div><div class="actionbar"><span class="tag ${t.type==='income'?'green':''}">${t.type==='income'?'+':'−'} ${money(t.amount)}</span><button class="iconbtn d" onclick="delTx(${t.id})">×</button></div></div>`).join('')||'<div class="card empty">تراکنشی ثبت نشده.</div>'}</div>`;
+  const c=db.customers.find(x=>x.id==id);
+  if(!c)return;
+
+  const apps=db.appointments
+    .filter(a=>
+      String(a.customerId)===String(id) ||
+      a.name===c.name
+    )
+    .sort((a,b)=>
+      (b.date+b.time).localeCompare(a.date+a.time)
+    );
+
+  const linkedPaid=sum(
+    db.transactions,
+    t=>
+      t.type==='income' &&
+      String(t.customerId)===String(id)
+        ?t.amount
+        :0
+  );
+
+  const linkedAppointmentIds=new Set(
+    db.transactions
+      .filter(t=>
+        t.type==='income' &&
+        String(t.customerId)===String(id) &&
+        t.appointmentId
+      )
+      .map(t=>String(t.appointmentId))
+  );
+
+  const services=apps.filter(
+    a=>a.status==='انجام شد'
+  );
+
+  const legacyPaid=sum(
+    services,
+    a=>
+      linkedAppointmentIds.has(String(a.id))
+        ?0
+        :(Number(a.price)||0)
+  );
+
+  const paid=linkedPaid+legacyPaid;
+
+  openSheet(
+    'پرونده مشتری',
+
+    `
+    <div class="card"
+         style="box-shadow:none;background:#f7f7f8">
+
+      <b style="font-size:20px">
+        ${esc(c.name)}
+      </b>
+
+      <div class="small">
+        ${esc(c.phone||'شماره ثبت نشده')}
+      </div>
+
+      <div class="small">
+        🎂 تولد:
+        ${c.birthday
+          ?esc(birthdayFa(c.birthday))
+          :'ثبت نشده'}
+      </div>
+
+      <div class="detail-grid">
+
+        <div class="mini">
+          <span class="label">مراجعه انجام‌شده</span>
+          <b>
+            ${services.length.toLocaleString('fa-IR')}
+          </b>
+        </div>
+
+        <div class="mini">
+          <span class="label">مجموع پرداختی</span>
+          <b class="green">
+            ${money(paid)}
+          </b>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h3>سوابق خدمات و پرداختی</h3>
+    </div>
+
+    <div class="list">
+
+      ${
+        services.map(a=>{
+
+          const tx=db.transactions.find(t=>
+            t.type==='income' &&
+            String(t.appointmentId)===String(a.id)
+          );
+
+          const staff=db.staff.find(s=>
+            String(s.id)===String(a.staffId)
+          );
+
+          return `
+            <div class="row">
+
+              <div class="row-main">
+
+                <b>
+                  ${esc(a.service||'خدمت')}
+                </b>
+
+                <div class="small">
+                  ${esc(a.date)}
+                  ${a.time?' • '+esc(a.time):''}
+                </div>
+
+                <div class="small">
+                  پرسنل:
+                  ${esc(staff?.name||'ثبت نشده')}
+                </div>
+
+              </div>
+
+              <span class="tag green">
+                ${money(tx?.amount||a.price||0)}
+              </span>
+
+            </div>
+          `;
+
+        }).join('') ||
+
+        '<div class="card empty">هنوز خدمتی ثبت نشده.</div>'
+      }
+
+    </div>
+    `
+  );
+}  <div class="list">${db.transactions.slice().reverse().map(t=>`<div class="row"><div class="row-main"><b>${esc(t.customerName||t.desc||'بدون شرح')}</b><div class="small">${esc(t.service||t.desc||'')} • ${esc(t.date)}${t.time?' • '+esc(t.time):''}${t.staffId?' • پرسنل: '+esc((db.staff.find(s=>String(s.id)===String(t.staffId))||{}).name||''):''}</div><div class="small">${t.type==='income'?'دریافتی':'هزینه'}</div></div><div class="actionbar"><span class="tag ${t.type==='income'?'green':''}">${t.type==='income'?'+':'−'} ${money(t.amount)}</span><button class="iconbtn d" onclick="delTx(${t.id})">×</button></div></div>`).join('')||'<div class="card empty">تراکنشی ثبت نشده.</div>'}</div>`;
 }
 function addTx(){
   openSheet('ثبت دخل یا خرج',`
@@ -269,10 +797,13 @@ function addTx(){
       <select class="full" id="type"><option value="income">درآمد</option><option value="expense">هزینه</option></select>
       <input id="amount" type="number" inputmode="numeric" placeholder="مبلغ">
       <input id="txdate" type="date" value="${todayISO()}">
-      <input class="full" id="desc" placeholder="شرح (مثلاً اصلاح، خرید مواد...)">
+      <select class="full" id="txcustomer"><option value="">مشتری (اختیاری)</option>${db.customers.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select>
+      <input id="txservice" placeholder="خدمت">
+      <input class="full" id="desc" placeholder="شرح (مثلاً خرید مواد...)">
     </div>`,()=>{
       const amount=Number($('amount').value)||0;if(amount<=0){alert('مبلغ را وارد کنید.');return false}
-      db.transactions.push({id:Date.now(),type:$('type').value,amount,desc:$('desc').value.trim(),date:$('txdate').value||todayISO()});save();render('finance');
+      const customerId=$('txcustomer').value||'';const c=db.customers.find(x=>String(x.id)===String(customerId));
+      db.transactions.push({id:Date.now(),type:$('type').value,amount,desc:$('desc').value.trim(),date:$('txdate').value||todayISO(),time:'',customerId,customerName:c?.name||'',service:$('txservice').value.trim(),staffId:'',appointmentId:''});save();render('finance');
     });
 }
 function delTx(id){if(confirm('این تراکنش حذف شود؟')){db.transactions=db.transactions.filter(x=>x.id!=id);save();render('finance')}}
@@ -320,9 +851,9 @@ function more(){
   <div class="list">
     <div class="row" onclick="render('finance')"><div class="row-main"><b>💰 دخل و خرج</b><div class="small">درآمد، هزینه، سود و حذف تراکنش</div></div><span>›</span></div>
     <div class="row" onclick="render('inventory')"><div class="row-main"><b>📦 انبار و محصولات</b><div class="small">موجودی، قیمت خرید و فروش، هشدار کمبود</div></div><span>›</span></div>
-    <div class="row"><div class="row-main"><b>🎂 تبریک تولد + تخفیف ۵۰٪</b><div class="small">با ثبت تاریخ تولد، مشتری در روز تولدش در داشبورد مشخص می‌شود و متن پیامک آماده است.</div></div><span class="tag green">۵۰٪</span></div>
+    <div class="row"><div class="row-main"><b>🎂 تبریک تولد + تخفیف ۵۰٪</b><div class="small">با ثبت تاریخ تولد، مشتری در روز تولدش در داشبورد مشخص می‌شود و تخفیف ۵۰٪ برای او قابل ثبت است.</div></div><span class="tag green">۵۰٪</span></div>
     <div class="row" onclick="render('staff')"><div class="row-main"><b>💈 کارکرد پرسنل</b><div class="small">ثبت پرسنل و محاسبه خودکار ۵۰٪ کارکرد</div></div><span>›</span></div>
-     <div class="row" onclick="render('reports')"><div class="row-main"><b>📊 گزارش‌ها</b><div class="small">گزارش مالی و درآمد ۷ روز اخیر</div></div><span>›</span></div>
+    <div class="row" onclick="render('reports')"><div class="row-main"><b>📊 گزارش‌ها</b><div class="small">گزارش مالی و درآمد ۷ روز اخیر</div></div><span>›</span></div>
     <div class="row"><div class="row-main"><b>💾 پشتیبان‌گیری</b><div class="small">فایل اطلاعات را برای نگهداری یا انتقال ذخیره کن.</div></div><button class="btn gray small" onclick="backup()">خروجی</button></div>
     <div class="row"><div class="row-main"><b>↩️ بازیابی اطلاعات</b><div class="small">فایل JSON پشتیبان را انتخاب کن.</div></div><input id="restore" type="file" accept=".json" style="width:125px"></div>
     <div class="row"><div class="row-main"><b>🧹 پاک‌سازی اطلاعات</b><div class="small">فقط در صورت نیاز؛ قابل برگشت نیست.</div></div><button class="btn danger small" onclick="wipe()">پاک کردن</button></div>
@@ -354,19 +885,11 @@ function stockAlert(){
   localStorage.setItem('mk_stock_alert_date',stamp);
   setTimeout(()=>{
     alert('⚠️ هشدار موجودی\n\nاین محصولات نزدیک به اتمام یا تمام شده‌اند:\n\n'+
-      low.map(p=>'• '+p.name+' — موجودی: '+p.qty+' (حد هشدار: '+p.min+')').join('\\n'));
+      low.map(p=>'• '+p.name+' — موجودی: '+p.qty+' (حد هشدار: '+p.min+')').join('\n'));
   },700);
 }
 render('home');
-stockAlert();
-function birthdayAlert(){
-  const today=new Date();today.setHours(0,0,0,0);
-  const list=db.customers.filter(c=>c.birthday&&c.birthdaySms!==false).filter(c=>{const p=c.birthday.split('-');if(p.length<3)return false;const d=new Date(today.getFullYear(),Number(p[1])-1,Number(p[2]));d.setHours(0,0,0,0);const diff=Math.round((d-today)/86400000);return diff===1||diff===0;});
-  if(!list.length)return;
-  const stamp='mk_birthday_alert_'+todayISO();if(localStorage.getItem(stamp))return;localStorage.setItem(stamp,'1');
-  setTimeout(()=>alert(list.map(c=>{const p=c.birthday.split('-');const d=new Date(today.getFullYear(),Number(p[1])-1,Number(p[2]));const isTomorrow=Math.round((d-today)/86400000)===1;return (isTomorrow?'🔔 فردا تولد ':'🎂 امروز تولد ')+c.name+' است.\nپیامک: سلام '+c.name+' عزیز 🌹 تولدتون مبارک! به مناسبت تولدتون، یک سرویس با ۵۰٪ تخفیف در آرایشگاه کرمانی مهمان ما هستید. 💈❤️';}).join('\n\n')),1200);
-}
-birthdayAlert();
+
 </script>
 </body>
 </html>
